@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>DOM задания</title>
+</head>
+<body>
+
+<!-- 1. Изменение текста -->
+<h1 id="title">Привет!</h1>
+
+<!-- 2. Подсчёт элементов -->
+<p>Первый абзац</p>
+<p>Второй абзац</p>
+<p>Третий абзац</p>
+
+<!-- 3. Изменение атрибутов -->
+<a id="link">Перейти</a>
+
+<!-- 5. Картинка -->
+<br><br>
+<img id="image" src="https://via.placeholder.com/150" width="150">
+
+<script>
+
+//////////////////////////////
+// 1. Изменение текста
+//////////////////////////////
+document.getElementById("title").textContent = "Добро пожаловать!";
+
+
+//////////////////////////////
+// 2. Подсчёт элементов
+//////////////////////////////
+let paragraphs = document.getElementsByTagName("p");
+alert("Количество <p>: " + paragraphs.length);
+
+
+//////////////////////////////
+// 3. Изменение атрибутов
+//////////////////////////////
+let link = document.getElementById("link");
+link.setAttribute("href", "https://google.com");
+link.setAttribute("target", "_blank");
+
+
+//////////////////////////////
+// 4. Стилизация
+//////////////////////////////
+let firstP = document.querySelector("p");
+firstP.style.color = "red";
+firstP.style.fontSize = "20px";
+
+
+//////////////////////////////
+// 5. Изменение картинки
+//////////////////////////////
+let img = document.getElementById("image");
+img.src = "https://picsum.photos/200";
+
+</script>
+
+</body>
+</html>
